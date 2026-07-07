@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FCFBF7;
+  --color-brandgreen: #10B981; /* Premium Mint Emerald Green */
+  --color-brandgreen-dark: #059669;
+  --color-darkgreen: #0F3D26; /* Forest Green */
+  --color-darkbrown: #2C1E18; /* Heading text color */
+  --color-gold: #D4AF37;
+  
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Outfit", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-darkbrown);
+    font-family: var(--font-sans);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+  }
+}
+
+/* Custom CSS Helpers */
+.text-stroke-green {
+  -webkit-text-stroke: 1px var(--color-brandgreen);
+  color: transparent;
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+}
+
+/* Custom Hide Scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom GSAP Floating Animation */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 8s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* Custom cursor or interactive markers */
+.interactive-card {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.interactive-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(15, 61, 38, 0.08);
+}
+
+/* Infinite Marquee Scroll */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
