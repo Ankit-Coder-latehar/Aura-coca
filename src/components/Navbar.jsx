@@ -5,6 +5,7 @@ import gsap from "gsap";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isRendered, setIsRendered] = useState(false);
   const location = useLocation();
   const menuRef = useRef(null);
   const linksRef = useRef([]);
@@ -14,9 +15,16 @@ export default function Navbar() {
     setIsOpen(false);
   }, [location]);
 
-  // GSAP animation for mobile menu
+  // Sync isRendered state when menu is opened
   useEffect(() => {
     if (isOpen) {
+      setIsRendered(true);
+    }
+  }, [isOpen]);
+
+  // GSAP animation for mobile menu
+  useEffect(() => {
+    if (isOpen && menuRef.current) {
       document.body.classList.add("menu-open");
       gsap.to(menuRef.current, {
         x: 0,
@@ -28,18 +36,21 @@ export default function Navbar() {
         { y: 20, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.3, stagger: 0.08, delay: 0.1, ease: "power2.out" }
       );
-    } else {
+    } else if (!isOpen && isRendered && menuRef.current) {
       document.body.classList.remove("menu-open");
       gsap.to(menuRef.current, {
         x: "100%",
         duration: 0.4,
         ease: "power3.in",
+        onComplete: () => {
+          setIsRendered(false);
+        }
       });
     }
     return () => {
       document.body.classList.remove("menu-open");
     };
-  }, [isOpen]);
+  }, [isOpen, isRendered]);
 
   const activeClass = (path) =>
     location.pathname === path
@@ -103,15 +114,14 @@ export default function Navbar() {
       )}
 
       {/* Mobile Drawer Navigation */}
-      <div
-        ref={menuRef}
-        className="fixed inset-y-0 right-0 w-full md:w-80 shadow-2xl z-50 lg:hidden flex flex-col p-8 transform translate-x-full border-l border-[#0F3D26]/10"
-        style={{
-          visibility: isOpen ? "visible" : "hidden",
-          pointerEvents: isOpen ? "auto" : "none",
-          backgroundColor: "#ffffff"
-        }}
-      >
+      {isRendered && (
+        <div
+          ref={menuRef}
+          className="fixed inset-y-0 right-0 w-full md:w-80 shadow-2xl z-50 lg:hidden flex flex-col p-8 transform translate-x-full border-l border-[#0F3D26]/10"
+          style={{
+            backgroundColor: "#ffffff"
+          }}
+        >
         <div className="flex justify-between items-center mb-8">
           <span className="font-serif text-xl font-bold text-darkbrown">Menu</span>
           <button
@@ -159,6 +169,7 @@ export default function Navbar() {
           </a>
         </div>
       </div>
+      )}
     </nav>
   );
 }
