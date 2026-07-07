@@ -86,3 +86,11 @@
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+/* Hide main page content when mobile menu is open to prevent any visual overlap */
+@media (max-width: 1023px) {
+  body.menu-open main,
+  body.menu-open footer {
+    display: none !important;
+  }
+}

@@ -186,7 +186,7 @@ export default function Home() {
         <div ref={heroImageRef} className="relative flex justify-center lg:justify-end">
           <div className="relative w-80 h-80 md:w-[450px] md:h-[450px] rounded-full bg-[#0F3D26]/5 flex items-center justify-center border-4 border-dashed border-[#0F3D26]/10">
             {/* Main Coconut Mock Image */}
-            <div className="w-[85%] h-[85%] rounded-full overflow-hidden bg-cover bg-center shadow-2xl relative" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1526318896980-cf78c088247c?auto=format&fit=crop&w=800&q=80')` }}>
+            <div className="w-[85%] h-[85%] rounded-full overflow-hidden bg-cover bg-center shadow-2xl relative" style={{ backgroundImage: `url('/Screenshot 2026-07-07 154342.png')` }}>
               <div className="absolute inset-0 bg-black/10 flex flex-col justify-end p-8 text-white font-serif">
                 <span className="text-xs uppercase tracking-widest text-brandgreen font-bold bg-[#FCFBF7] px-3 py-1 rounded-full self-start mb-2">Engraved</span>
                 <h3 className="text-xl font-bold">"Rohan & Riya" Save The Date Stamp</h3>
@@ -367,7 +367,7 @@ export default function Home() {
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-          <div className="h-96 lg:h-auto min-h-[350px] bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1548543594-5ef912d09855?auto=format&fit=crop&w=800&q=80')` }}>
+          <div className="h-96 lg:h-auto min-h-[350px] bg-cover bg-center" style={{ backgroundImage: `url('/Screenshot 2026-07-07 154355.png')` }}>
             {/* Visual background */}
           </div>
         </div>
@@ -486,21 +486,21 @@ export default function Home() {
               {
                 title: "Why Custom Engraved Coconuts are the New Wedding Trend",
                 excerpt: "Discover how couples in Bangalore are opting for organic, eco-friendly welcome drinks instead of mocktails to wow their guests.",
-                image: "https://images.unsplash.com/photo-1526318896980-cf78c088247c?auto=format&fit=crop&w=800&q=80",
+                image: "/Screenshot 2026-07-07 154452.png",
                 date: "July 2, 2026",
                 readTime: "5 min read"
               },
               {
                 title: "The Ultimate Guide to Sustainable Luxury Events",
                 excerpt: "Learn how to reduce your event's carbon footprint with bamboo straws, plastic-free setups, and organic catering coordinates.",
-                image: "https://images.unsplash.com/photo-1508002882312-32b0a3eb7fa4?auto=format&fit=crop&w=800&q=80",
+                image: "/Screenshot 2026-07-07 154536.png",
                 date: "June 28, 2026",
                 readTime: "4 min read"
               },
               {
                 title: "How to Design Your Custom Wedding Monogram",
                 excerpt: "Tips and templates from our design team to create the perfect laser-engraved monogram stamp for your big celebration.",
-                image: "https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&w=800&q=80",
+                image: "/Screenshot 2026-07-07 154555.png",
                 date: "June 15, 2026",
                 readTime: "6 min read"
               }

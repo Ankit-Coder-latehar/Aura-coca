@@ -62,7 +62,7 @@ export default function About() {
             <div className="relative w-80 h-96 md:w-[450px] md:h-[500px] rounded-[40px] overflow-hidden shadow-2xl bg-[#0F3D26]/5 border border-[#0F3D26]/10">
               <div
                 className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url('https://images.unsplash.com/photo-1568383211756-3408a287900b?auto=format&fit=crop&w=800&q=80')` }}
+                style={{ backgroundImage: `url('/Screenshot 2026-07-07 154424.png')` }}
               >
                 <div className="absolute inset-0 bg-[#0F3D26]/30 flex flex-col justify-end p-8 text-white">
                   <span className="font-serif text-sm italic">"Natural, Premium, & Unique Refreshments"</span>

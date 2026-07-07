@@ -9,27 +9,27 @@ export default function Photos() {
 
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1526318896980-cf78c088247c?auto=format&fit=crop&w=800&q=80",
+      url: "/Screenshot 2026-07-07 154452.png",
       caption: "Custom Couple Name & Monogram Engraving",
     },
     {
-      url: "https://images.unsplash.com/photo-1568383211756-3408a287900b?auto=format&fit=crop&w=800&q=80",
+      url: "/Screenshot 2026-07-07 154536.png",
       caption: "Fresh Green Organic Coconuts Farm Harvest",
     },
     {
-      url: "https://images.unsplash.com/photo-1548543594-5ef912d09855?auto=format&fit=crop&w=800&q=80",
+      url: "/Screenshot 2026-07-07 154555.png",
       caption: "Exotic Coconut Refreshments Counter",
     },
     {
-      url: "https://images.unsplash.com/photo-1508002882312-32b0a3eb7fa4?auto=format&fit=crop&w=800&q=80",
+      url: "/Screenshot 2026-07-07 154615.png",
       caption: "High-yield Coconut Palm Plantation Sourcing",
     },
     {
-      url: "https://images.unsplash.com/photo-1562916892-db5ec3b5ba53?auto=format&fit=crop&w=800&q=80",
+      url: "/Screenshot 2026-07-07 154424.png",
       caption: "Stall Setup & Rustic Coconut Displays",
     },
     {
-      url: "https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&w=800&q=80",
+      url: "/Screenshot 2026-07-07 154342.png",
       caption: "Trimmed Coconuts Served on Wooden Event Stands",
     },
   ];
@@ -47,7 +47,7 @@ export default function Photos() {
       <FloatingLeaves />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        
+
         {/* Header Block */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="bg-[#0F3D26]/5 text-[#0F3D26] px-4 py-1.5 rounded-full text-sm font-semibold tracking-wider uppercase inline-block border border-[#0F3D26]/10 mb-4">
