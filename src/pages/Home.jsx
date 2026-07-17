@@ -314,11 +314,11 @@ export default function Home() {
               <ArrowRight className="w-5 h-5" />
             </Link>
             <a
-              href="tel:+917483261771"
+              href="tel:+919538648911"
               className="border-2 border-[#ECEFEF]/20 hover:border-gold text-[#ECEFEF] hover:text-gold px-8 py-4 rounded-full font-bold text-center transition-all duration-300 flex items-center justify-center space-x-2"
             >
               <Phone className="w-5 h-5" />
-              <span>Call +91 74832 61771</span>
+              <span>Call +91 95386 48911</span>
             </a>
           </div>
         </div>

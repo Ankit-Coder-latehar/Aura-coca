@@ -120,7 +120,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs text-[#ECEFEF]/50 uppercase tracking-widest">Call or WhatsApp</p>
-                  <a href="tel:+917483261771" className="text-lg font-bold hover:text-gold transition-colors">+91 74832 61771</a>
+                  <a href="tel:+919538648911" className="text-lg font-bold hover:text-gold transition-colors">+91 95386 48911</a>
                 </div>
               </div>
 

@@ -113,11 +113,11 @@ export default function Navbar() {
         {/* Call CTA Button */}
         <div className="hidden xl:flex items-center flex-shrink-0">
           <a
-            href="tel:+917483261771"
+            href="tel:+919538648911"
             className="flex items-center space-x-2 bg-gradient-to-r from-brandgreen to-brandgreen-dark hover:from-gold hover:to-gold hover:text-[#030806] text-white px-5 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-[0_5px_15px_rgba(16,185,129,0.2)] hover:shadow-[0_5px_20px_rgba(226,195,117,0.3)] whitespace-nowrap flex-shrink-0"
           >
             <Phone className="w-4 h-4 flex-shrink-0" />
-            <span className="whitespace-nowrap">Call +91 74832 61771</span>
+            <span className="whitespace-nowrap">Call +91 95386 48911</span>
           </a>
         </div>
       </div>
@@ -180,7 +180,7 @@ export default function Navbar() {
 
           <div className="mt-auto pt-6 relative z-10">
             <a
-              href="tel:+917483261771"
+              href="tel:+919538648911"
               className="flex items-center justify-center space-x-2 bg-brandgreen hover:bg-gold hover:text-[#030806] text-white py-3.5 rounded-xl font-semibold transition-all duration-300 shadow-md"
             >
               <Phone className="w-5 h-5" />

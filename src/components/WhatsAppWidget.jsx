@@ -13,7 +13,7 @@ export default function WhatsAppWidget() {
   }, []);
 
   const openWhatsApp = () => {
-    const phoneNumber = "917483261771";
+    const phoneNumber = "919538648911";
     const message = "Hi Aura coco! I'd like to inquire about booking customized tender coconuts for my event.";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
