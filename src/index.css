@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cream: #FCFBF7;
+  --color-cream: #030806; /* Obsidian Dark Background */
   --color-brandgreen: #10B981; /* Premium Mint Emerald Green */
   --color-brandgreen-dark: #059669;
-  --color-darkgreen: #0F3D26; /* Forest Green */
-  --color-darkbrown: #2C1E18; /* Heading text color */
-  --color-gold: #D4AF37;
+  --color-darkgreen: #072216; /* Deep Forest Green for dark mode headers/sections */
+  --color-darkbrown: #ECEFEF; /* Light Ivory/Cream text color for high contrast */
+  --color-gold: #E2C375; /* Premium Champagne Gold */
   
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: "Outfit", system-ui, -apple-system, sans-serif;
@@ -17,6 +17,7 @@
     background-color: var(--color-cream);
     color: var(--color-darkbrown);
     font-family: var(--font-sans);
+    overflow-x: hidden;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -87,6 +88,59 @@
   animation-play-state: paused;
 }
 
+/* Glassmorphism & Neon Glow Helpers */
+.glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card:hover {
+  border-color: rgba(226, 195, 117, 0.3); /* champagne gold border on hover */
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.glow-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.text-gold {
+  color: var(--color-gold);
+}
+
+.border-gold {
+  border-color: var(--color-gold);
+}
+
+/* Mouse Scroll Down Animation */
+@keyframes scrollDown {
+  0% { transform: translate(-50%, 0) scaleY(1); opacity: 0; }
+  20% { opacity: 1; }
+  60% { transform: translate(-50%, 12px) scaleY(1.2); opacity: 0; }
+  100% { transform: translate(-50%, 12px) scaleY(1.2); opacity: 0; }
+}
+
+.animate-scroll {
+  animation: scrollDown 2.2s cubic-bezier(0.15, 0.41, 0.69, 0.94) infinite;
+}
+
+/* Neon glow helper */
+.glow-card-active {
+  border-color: rgba(226, 195, 117, 0.6) !important;
+  box-shadow: 0 0 25px rgba(226, 195, 117, 0.15);
+}
+
+.glow-card-green-active {
+  border-color: rgba(16, 185, 129, 0.5) !important;
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.15);
+}
+
 /* Hide main page content when mobile menu is open to prevent any visual overlap */
 @media (max-width: 1023px) {
   body.menu-open main,
@@ -94,3 +148,73 @@
     display: none !important;
   }
 }
+
+/* Card Shimmer Sweep Keyframes */
+@keyframes shimmerSweep {
+  0% { transform: translateX(-150%) skewX(-25deg); }
+  40% { transform: translateX(150%) skewX(-25deg); }
+  100% { transform: translateX(150%) skewX(-25deg); }
+}
+
+.animate-shimmer-sweep {
+  animation: shimmerSweep 4.5s ease-in-out infinite;
+}
+
+/* Laurel spin animation */
+@keyframes slowSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-slow-spin {
+  animation: slowSpin 25s linear infinite;
+}
+
+/* Reverse spin for outer seal */
+@keyframes slowSpinReverse {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.animate-slow-spin-reverse {
+  animation: slowSpinReverse 35s linear infinite;
+}
+
+/* Shine pulse gold */
+@keyframes shineGold {
+  0%, 100% { box-shadow: 0 0 15px rgba(226, 195, 117, 0.2); }
+  50% { box-shadow: 0 0 35px rgba(226, 195, 117, 0.6); }
+}
+
+.animate-shine-gold {
+  animation: shineGold 3s ease-in-out infinite;
+}
+
+/* Award Card hover gradient border container */
+.award-card-container {
+  position: relative;
+  border-radius: 1.5rem;
+  padding: 1px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.award-card-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  padding: 1.5px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.award-card-container:hover::before {
+  background: linear-gradient(135deg, var(--color-brandgreen) 0%, var(--color-gold) 50%, var(--color-brandgreen) 100%);
+}
+
+

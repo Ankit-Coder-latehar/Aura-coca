@@ -23,14 +23,14 @@ export default function WhatsAppWidget() {
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
       {/* Tooltip Message */}
       {showTooltip && (
-        <div className="bg-white text-darkbrown px-4 py-3 rounded-2xl shadow-2xl border border-brandgreen/10 mb-3 max-w-xs animate-fade-in relative transition-all duration-300">
+        <div className="bg-[#030806]/95 backdrop-blur-md text-white px-4 py-3 rounded-2xl shadow-2xl border border-white/10 mb-3 max-w-xs animate-fade-in relative transition-all duration-300">
           <button
             onClick={() => setShowTooltip(false)}
-            className="absolute top-1.5 right-1.5 text-gray-400 hover:text-gray-600 p-0.5 rounded-full"
+            className="absolute top-1.5 right-1.5 text-gray-400 hover:text-white p-0.5 rounded-full"
           >
             <X className="w-3.5 h-3.5" />
           </button>
-          <p className="text-xs font-semibold text-brandgreen mb-0.5">Aura coco Concierge</p>
+          <p className="text-xs font-semibold text-gold mb-0.5">Aura coco Concierge</p>
           <p className="text-sm font-medium leading-tight">🌴 Let's plan your custom event coconuts! Chat now.</p>
         </div>
       )}

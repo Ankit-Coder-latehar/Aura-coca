@@ -84,20 +84,24 @@ export default function Contact() {
   };
 
   return (
-    <div className="relative min-h-screen pt-12 pb-24 px-6 md:px-12">
+    <div className="relative min-h-screen bg-[#030806] text-[#ECEFEF] pt-32 pb-24 px-6 md:px-12">
       <FloatingLeaves />
+
+      {/* Ambient background glows */}
+      <div className="glow-blob w-96 h-96 bg-brandgreen/15 top-10 left-10"></div>
+      <div className="glow-blob w-96 h-96 bg-gold/5 bottom-10 right-10"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
 
         {/* Header Block */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="bg-[#0F3D26]/5 text-[#0F3D26] px-4 py-1.5 rounded-full text-sm font-semibold tracking-wider uppercase inline-block border border-[#0F3D26]/10 mb-4">
+          <span className="bg-brandgreen/10 text-gold px-4 py-1.5 rounded-full text-sm font-semibold tracking-wider uppercase inline-block border border-gold/20 mb-4">
             Connect
           </span>
-          <h1 className="font-serif text-4xl md:text-6xl font-bold text-darkbrown mb-6">
+          <h1 className="font-serif text-4xl md:text-6xl font-bold text-[#ECEFEF] mb-6">
             Get In Touch
           </h1>
-          <p className="text-lg text-darkbrown/70 leading-relaxed">
+          <p className="text-lg text-[#ECEFEF]/70 leading-relaxed">
             Ready to treat your guests to premium engraved coconuts? Fill out the form or reach us directly.
           </p>
         </div>
@@ -107,55 +111,55 @@ export default function Contact() {
           {/* Support Info */}
           <div ref={infoRef} className="lg:col-span-5 flex flex-col space-y-8">
 
-            <div className="bg-[#0F3D26] text-white rounded-[30px] p-8 shadow-xl flex flex-col space-y-6">
-              <h2 className="font-serif text-2xl font-bold text-brandgreen">Contact Details</h2>
+            <div className="bg-gradient-to-br from-[#072216] to-[#030806] border border-white/10 text-white rounded-[30px] p-8 shadow-xl flex flex-col space-y-6">
+              <h2 className="font-serif text-2xl font-bold text-gold">Contact Details</h2>
 
               <div className="flex items-center space-x-4">
-                <div className="bg-white/10 p-3 rounded-full text-brandgreen shrink-0">
+                <div className="bg-white/10 p-3 rounded-full text-gold shrink-0">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-xs text-[#FCFBF7]/50 uppercase tracking-widest">Call or WhatsApp</p>
-                  <a href="tel:+917483261771" className="text-lg font-bold hover:text-brandgreen transition-colors">+91 74832 61771</a>
+                  <p className="text-xs text-[#ECEFEF]/50 uppercase tracking-widest">Call or WhatsApp</p>
+                  <a href="tel:+917483261771" className="text-lg font-bold hover:text-gold transition-colors">+91 74832 61771</a>
                 </div>
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="bg-white/10 p-3 rounded-full text-brandgreen shrink-0">
+                <div className="bg-white/10 p-3 rounded-full text-gold shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-xs text-[#FCFBF7]/50 uppercase tracking-widest">Email Address</p>
-                  <a href="mailto:hello@auracoco.in" className="text-lg font-bold hover:text-brandgreen transition-colors">hello@auracoco.in</a>
+                  <p className="text-xs text-[#ECEFEF]/50 uppercase tracking-widest">Email Address</p>
+                  <a href="mailto:hello@auracoco.in" className="text-lg font-bold hover:text-gold transition-colors">hello@auracoco.in</a>
                 </div>
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="bg-white/10 p-3 rounded-full text-brandgreen shrink-0">
+                <div className="bg-white/10 p-3 rounded-full text-gold shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-xs text-[#FCFBF7]/50 uppercase tracking-widest">Service Area</p>
+                  <p className="text-xs text-[#ECEFEF]/50 uppercase tracking-widest">Service Area</p>
                   <p className="text-lg font-bold">Bangalore City, Karnataka</p>
                 </div>
               </div>
             </div>
 
             {/* Working Hours */}
-            <div className="bg-white/60 backdrop-blur-md border border-[#0F3D26]/10 rounded-[30px] p-8 shadow-md flex flex-col space-y-6">
-              <h2 className="font-serif text-2xl font-bold text-darkbrown flex items-center">
-                <Clock className="w-6 h-6 text-brandgreen mr-2" />
+            <div className="glass-card border border-white/5 rounded-[30px] p-8 shadow-md flex flex-col space-y-6">
+              <h2 className="font-serif text-2xl font-bold text-[#ECEFEF] flex items-center">
+                <Clock className="w-6 h-6 text-gold mr-2" />
                 Working Hours
               </h2>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
-                  <p className="font-semibold text-darkbrown">Weekdays</p>
-                  <p className="text-darkbrown/65">Monday - Friday</p>
+                  <p className="font-semibold text-gold">Weekdays</p>
+                  <p className="text-[#ECEFEF]/65">Monday - Friday</p>
                   <p className="text-brandgreen font-bold mt-1">08:30 - 20:00</p>
                 </div>
                 <div>
-                  <p className="font-semibold text-darkbrown">Weekends</p>
-                  <p className="text-darkbrown/65">Saturday - Sunday</p>
+                  <p className="font-semibold text-gold">Weekends</p>
+                  <p className="text-[#ECEFEF]/65">Saturday - Sunday</p>
                   <p className="text-brandgreen font-bold mt-1">09:30 - 21:30</p>
                 </div>
               </div>
@@ -165,22 +169,22 @@ export default function Contact() {
 
           {/* Form container */}
           <div className="lg:col-span-7">
-            <div className="bg-white border border-[#0F3D26]/10 rounded-[30px] p-8 md:p-12 shadow-xl">
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-darkbrown mb-6">Booking Inquiry Form</h2>
+            <div className="glass-card border border-white/10 rounded-[30px] p-8 md:p-12 shadow-xl">
+              <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#ECEFEF] mb-6">Booking Inquiry Form</h2>
 
               {submitted ? (
-                <div className="bg-[#0F3D26] text-white p-8 rounded-2xl text-center shadow-md animate-fade-in">
-                  <h3 className="font-serif text-2xl font-bold mb-2 text-brandgreen">Enquiry Sent!</h3>
-                  <p className="text-[#FCFBF7]/85 mb-4">
+                <div className="bg-[#072216] border border-gold/20 text-white p-8 rounded-2xl text-center shadow-md animate-fade-in">
+                  <h3 className="font-serif text-2xl font-bold mb-2 text-gold">Enquiry Sent!</h3>
+                  <p className="text-[#ECEFEF]/85 mb-4">
                     Thank you {formData.firstName}. We will get back to you with custom catalog templates and quotation options within 24 hours.
                   </p>
-                  <div className="w-12 h-12 border-4 border-t-brandgreen border-white/20 rounded-full animate-spin mx-auto mt-4"></div>
+                  <div className="w-12 h-12 border-4 border-t-gold border-white/20 rounded-full animate-spin mx-auto mt-4"></div>
                 </div>
               ) : (
                 <form onSubmit={handleFormSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-semibold text-darkbrown mb-2">First Name *</label>
+                      <label className="block text-sm font-semibold text-[#ECEFEF] mb-2">First Name *</label>
                       <input
                         type="text"
                         name="firstName"
@@ -188,25 +192,25 @@ export default function Contact() {
                         value={formData.firstName}
                         onChange={handleInputChange}
                         placeholder="Enter first name"
-                        className="w-full px-4 py-3 rounded-xl border border-darkbrown/10 bg-white focus:outline-none focus:border-brandgreen transition-colors text-sm"
+                        className="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/[0.02] text-white focus:outline-none focus:border-gold placeholder-white/30 transition-colors text-sm"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold text-darkbrown mb-2">Last Name</label>
+                      <label className="block text-sm font-semibold text-[#ECEFEF] mb-2">Last Name</label>
                       <input
                         type="text"
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleInputChange}
                         placeholder="Enter last name"
-                        className="w-full px-4 py-3 rounded-xl border border-darkbrown/10 bg-white focus:outline-none focus:border-brandgreen transition-colors text-sm"
+                        className="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/[0.02] text-white focus:outline-none focus:border-gold placeholder-white/30 transition-colors text-sm"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-semibold text-darkbrown mb-2">Phone / Mobile *</label>
+                      <label className="block text-sm font-semibold text-[#ECEFEF] mb-2">Phone / Mobile *</label>
                       <input
                         type="tel"
                         name="phone"
@@ -214,64 +218,64 @@ export default function Contact() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         placeholder="Enter phone number"
-                        className="w-full px-4 py-3 rounded-xl border border-darkbrown/10 bg-white focus:outline-none focus:border-brandgreen transition-colors text-sm"
+                        className="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/[0.02] text-white focus:outline-none focus:border-gold placeholder-white/30 transition-colors text-sm"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold text-darkbrown mb-2">Email Address</label>
+                      <label className="block text-sm font-semibold text-[#ECEFEF] mb-2">Email Address</label>
                       <input
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="Enter email address"
-                        className="w-full px-4 py-3 rounded-xl border border-darkbrown/10 bg-white focus:outline-none focus:border-brandgreen transition-colors text-sm"
+                        className="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/[0.02] text-white focus:outline-none focus:border-gold placeholder-white/30 transition-colors text-sm"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-semibold text-darkbrown mb-2">Event Date</label>
+                      <label className="block text-sm font-semibold text-[#ECEFEF] mb-2">Event Date</label>
                       <input
                         type="date"
                         name="eventDate"
                         value={formData.eventDate}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 rounded-xl border border-darkbrown/10 bg-white focus:outline-none focus:border-brandgreen transition-colors text-sm"
+                        className="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/[0.02] text-white focus:outline-none focus:border-gold placeholder-white/30 transition-colors text-sm"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-semibold text-darkbrown mb-2">Estimated Guest Count</label>
+                      <label className="block text-sm font-semibold text-[#ECEFEF] mb-2">Estimated Guest Count</label>
                       <select
                         name="guestCount"
                         value={formData.guestCount}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 rounded-xl border border-darkbrown/10 bg-white focus:outline-none focus:border-brandgreen transition-colors text-sm"
+                        className="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/[0.02] text-white focus:outline-none focus:border-gold transition-colors text-sm"
                       >
-                        <option value="50">50 - 100 guests</option>
-                        <option value="100">100 - 200 guests</option>
-                        <option value="200">200 - 300 guests</option>
-                        <option value="300">300+ guests</option>
+                        <option value="50" className="bg-[#030806]">50 - 100 guests</option>
+                        <option value="100" className="bg-[#030806]">100 - 200 guests</option>
+                        <option value="200" className="bg-[#030806]">200 - 300 guests</option>
+                        <option value="300" className="bg-[#030806]">300+ guests</option>
                       </select>
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-darkbrown mb-2">Your Message</label>
+                    <label className="block text-sm font-semibold text-[#ECEFEF] mb-2">Your Message</label>
                     <textarea
                       name="message"
                       rows="4"
                       value={formData.message}
                       onChange={handleInputChange}
                       placeholder="Share particulars about your event themes, styling preferences, or design branding..."
-                      className="w-full px-4 py-3 rounded-xl border border-darkbrown/10 bg-white focus:outline-none focus:border-brandgreen transition-colors text-sm"
+                      className="w-full px-4 py-3 rounded-xl border border-white/10 bg-white/[0.02] text-white focus:outline-none focus:border-gold placeholder-white/30 transition-colors text-sm"
                     ></textarea>
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full bg-[#0F3D26] hover:bg-brandgreen text-white font-bold py-4 rounded-xl shadow-lg transition-colors duration-300 flex items-center justify-center space-x-2 cursor-pointer"
+                    className="w-full bg-brandgreen hover:bg-gold hover:text-[#030806] text-white font-bold py-4 rounded-xl shadow-lg transition-colors duration-300 flex items-center justify-center space-x-2 cursor-pointer"
                   >
                     <span>Submit Request</span>
                     <Send className="w-4 h-4" />
